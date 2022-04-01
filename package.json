@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@apollo/subgraph": "^0.3.3",
+    "@apollo/subgraph": "^0.4.0",
     "@grpc/grpc-js": "^1.5.10",
     "@grpc/proto-loader": "^0.6.9",
     "@nestjs/apollo": "^10.0.8",
