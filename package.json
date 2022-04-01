@@ -57,6 +57,10 @@
     "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
   },
+  "overrides": {
+    "minimist": "npm:minimist@^1.2.6",
+    "superagent": "npm:superagent@7.1.1"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
