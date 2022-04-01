@@ -1,0 +1,9 @@
+type Contry @key(fields: "id") {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  contries: [Contry!]
+  getContry(id: ID!): Contry
+}

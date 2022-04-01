@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package contry;
+
+service ContryService {
+  rpc FindOne (ContryById) returns (Contry) {}
+}
+
+message ContryById {
+  string id = 1;
+}
+
+message Contry {
+  string id = 1;
+  string name = 2;
+}

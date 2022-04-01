@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contry-service
+  labels:
+    app: contry-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contry-service
+  template:
+    metadata:
+      labels:
+        app: contry-service
+    spec:
+      imagePullSecrets:
+        - name: registry-creds
+      containers:
+        - name: contry-service
+          imagePullPolicy: Always
+          image: {{ .Values.image }}
+          env:
+            - name: PORT
+              value: "{{ .Values.port }}"
+            - name: GRPC_PORT
+              value: "{{ .Values.grpcPort }}"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: contry-service
+spec:
+  ports:
+    - port: 80
+      targetPort: {{ .Values.port }}
+      name: contry-service
+    - port: 6000
+      targetPort: {{ .Values.grpcPort }}
+      name: contry-service-grpc
+  selector:
+    app: contry-service
