@@ -28,7 +28,7 @@
     "@nestjs/common": "^8.4.3",
     "@nestjs/core": "^8.4.3",
     "@nestjs/graphql": "^10.0.8",
-    "@nestjs/microservices": "^8.4.3",
+    "@nestjs/microservices": "^8.4.4",
     "@nestjs/platform-express": "^8.4.3",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
